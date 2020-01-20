@@ -1,7 +1,8 @@
 Speaker Classification
 ======================
 
-Templates for classifying multiple audio types.
+
+Perform speaker identification by inferring MFCC with CNN.
 
 
 ## Usage
