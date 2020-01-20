@@ -1,0 +1,12 @@
+audio_raw_path:    # 音源PATH（話者：加工前）
+  data/Audio/Raw
+audio_build_path:  # 音源PATH（話者：加工後）
+  data/Audio/Build
+noise_raw_path:    # 音源PATH（ノイズ：加工前）
+  data/Noise/Raw
+noise_build_path:  # 音源PATH（ノイズ：加工後）
+  data/Noise/Build
+wave_fs:           # 音源のサンプリングレート
+  8000
+wave_sec:          # 音源の秒数
+  5.0
