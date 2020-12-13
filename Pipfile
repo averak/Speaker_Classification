@@ -7,6 +7,8 @@ name = "pypi"
 numpy = "*"
 tensorflow = "*"
 rwave = "*"
+tqdm = "*"
+pydub = "*"
 
 [dev-packages]
 flake8 = "*"
