@@ -3,12 +3,12 @@ import numpy as np
 
 
 class Model:
-    def __init__(self, vec_length=30, n_class=10,
+    def __init__(self, input_shape, n_class,
                  load_weights=False, model_file='nnet.h5'):
         self.__model_path = '%s/ckpt/%s' % (
             os.path.dirname(__file__), model_file)
 
-        self.__nnet = self.make_nnet((vec_length,), n_class)
+        self.__nnet = self.make_nnet(input_shape, n_class)
 
         if load_weights:
             self.nnet.load_weights(self.model_path)
@@ -17,7 +17,7 @@ class Model:
         import tensorflow.keras.layers as layers
         from tensorflow.keras import Model
 
-        input_L = layers.Input(shape=input_shape)
+        input_L = layers.Input(shape=(*input_shape, 1))
 
         conv1 = layers.Conv2D(filters=32, kernel_size=(3, 3), strides=(1, 1),
                               padding='same', activation='relu')(input_L)
